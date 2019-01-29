@@ -1,6 +1,10 @@
-require "fitbark/version"
-
+require 'addressable'
+require 'faraday'
+require 'fitbark/version'
+require 'fitbark/constants'
+require 'fitbark/errors'
+require 'fitbark/auth'
+require 'fitbark/client'
+# doc
 module Fitbark
-  class Error < StandardError; end
-  # Your code goes here...
 end
