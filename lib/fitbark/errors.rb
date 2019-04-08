@@ -23,5 +23,9 @@ module Fitbark
         @message = 'Token is required for this operation'
       end
     end
+    # ConnectionError
+    class ConnectionError < BaseError; end
+    # DataError
+    class DataError < BaseError; end
   end
 end
