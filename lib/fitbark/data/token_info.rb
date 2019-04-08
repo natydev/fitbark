@@ -4,7 +4,7 @@ module Fitbark
     class TokenInfo < Hashie::Trash
       include Hashie::Extensions::IndifferentAccess
       include Hashie::Extensions::Coercion
-      # Application data inside TokenInfo
+      # define Application data inside TokenInfo
       class Application < Hashie::Trash
         include Hashie::Extensions::IndifferentAccess
         property :uid
