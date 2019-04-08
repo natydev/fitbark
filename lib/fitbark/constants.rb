@@ -7,5 +7,6 @@ module Fitbark
     AUTHORIZE_PATH = '/oauth/authorize'.freeze
     TOKEN_PATH = '/oauth/token'.freeze
     TOKEN_INFO_PATH = TOKEN_PATH + '/info'.freeze
+    PREFIX_NAME_HANDLER = 'Fitbark::Handler::V2::'.freeze
   end
 end
