@@ -7,31 +7,29 @@ module Fitbark
       raise Fitbark::Errors::TokenNotProvidedError if token.nil?
 
       @token = token
-      @uri = Addressable::URI.new(host: API_HOST, scheme: API_SCHEME,
-                                  path: API_SUBHOST)
     end
 
     attr_reader :uri
 
-    # https://app.fitbark.com/api/v2/user
-    def user
-      JSON.parse(connection(fragment: 'user').body)
+    def method_missing(method, **args)
+      klass_handler(method).new(token: token, opts: args).response
+    rescue NameError => e
+      super
     end
 
-    def method_name; end
+    def respond_to?(method, include_private = false)
+      return true if klass_handler(method)
+    rescue NameError => e
+      super
+    end
 
     private
 
-    attr_reader :token
-
-    def connection(verb: :get, fragment:)
-      Faraday.new(url: uri).public_send(verb) do |req|
-        req.url fragment
-        req.headers = {
-          'Content-Type' => 'application/json',
-          'Authorization' => "Bearer #{token}"
-        }
-      end
+    def klass_handler(handler)
+      eval("#{PREFIX_NAME_HANDLER}#{handler.to_s.split('_')
+        .collect(&:capitalize).join}")
     end
+
+    attr_reader :token
   end
 end
