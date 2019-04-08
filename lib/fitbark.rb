@@ -1,5 +1,6 @@
 require 'addressable'
 require 'faraday'
+require 'oj'
 require 'fitbark/version'
 require 'fitbark/constants'
 require 'fitbark/errors'

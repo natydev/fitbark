@@ -47,4 +47,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'webmock', '~> 3.5'
   spec.add_dependency 'faraday', '~> 0.15'
   spec.add_dependency 'hashie', '~> 3.6'
+  spec.add_dependency 'oj', '~> 3.7'
 end
