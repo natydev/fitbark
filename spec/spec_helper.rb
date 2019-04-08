@@ -4,8 +4,10 @@ require 'securerandom'
 require 'hashie'
 require 'faker'
 require 'webmock/rspec'
+require 'support/rspec_helpers'
 
 RSpec.configure do |config|
+  config.include RspecHelpers
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = '.rspec_status'
 
