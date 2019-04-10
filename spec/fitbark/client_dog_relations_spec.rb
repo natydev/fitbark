@@ -1,12 +1,3 @@
-require 'fitbark/client'
-require 'fitbark/errors'
-require 'fitbark/constants'
-require 'fitbark/handler/v2/base.rb'
-require 'fitbark/handler/v2/dog_relations.rb'
-require 'fitbark/data/shared.rb'
-require 'fitbark/data/user_relation.rb'
-require 'fitbark/data/dog_preview.rb'
-
 RSpec.describe Fitbark::Client do
   let!(:token) { random_token }
   let!(:dog_relations_response) { json_response(:dog_relations) }

@@ -1,11 +1,3 @@
-require 'fitbark/client'
-require 'fitbark/errors'
-require 'fitbark/constants'
-require 'fitbark/handler/v2/base.rb'
-require 'fitbark/handler/v2/user_info.rb'
-require 'fitbark/data/shared.rb'
-require 'fitbark/data/user_info.rb'
-
 RSpec.describe Fitbark::Client do
   let!(:token) { random_token }
   let!(:user_info_response) { json_response(:user_info) }

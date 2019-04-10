@@ -1,9 +1,3 @@
-require 'fitbark/auth'
-require 'fitbark/constants'
-require 'fitbark/errors'
-require 'fitbark/data/shared.rb'
-require 'fitbark/data/token'
-
 RSpec.describe Fitbark::Auth do
   let!(:client_id) { SecureRandom.hex }
   let!(:client_secret) { Faker::Internet.password(8) }

@@ -1,7 +1,3 @@
-require 'fitbark/client'
-require 'fitbark/errors'
-require 'fitbark/constants'
-
 RSpec.describe Fitbark::Client do
   let!(:token) { random_token }
   let!(:user_info_response) { json_response(:user_info) }
