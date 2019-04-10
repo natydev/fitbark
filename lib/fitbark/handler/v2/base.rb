@@ -33,11 +33,9 @@ module Fitbark
         private
 
         def json_response
-          begin
-            Oj.load(raw_response)
-          rescue Oj::ParseError => e
-            raise(DataError.new(message: e.message))
-          end
+          Oj.load(raw_response)
+        rescue Oj::ParseError => e
+          raise(DataError.new(message: e.message))
         end
 
         def check_errors(conn)
