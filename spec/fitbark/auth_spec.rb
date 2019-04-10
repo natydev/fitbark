@@ -1,6 +1,7 @@
 require 'fitbark/auth'
 require 'fitbark/constants'
 require 'fitbark/errors'
+require 'fitbark/data/shared.rb'
 require 'fitbark/data/token'
 
 RSpec.describe Fitbark::Auth do
