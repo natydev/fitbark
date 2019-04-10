@@ -19,7 +19,6 @@ module Fitbark
       def scopes
         Array(self[:scope])
       end
-
     end
   end
 end

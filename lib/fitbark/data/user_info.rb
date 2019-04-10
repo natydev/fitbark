@@ -18,7 +18,6 @@ module Fitbark
       def fullname
         name
       end
-
     end
   end
 end

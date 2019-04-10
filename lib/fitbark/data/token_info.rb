@@ -16,7 +16,6 @@ module Fitbark
       def application
         Application.new self[:application]
       end
-
     end
   end
 end

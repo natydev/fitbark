@@ -11,7 +11,6 @@ module Fitbark
       def date
         time_parser(self[:date])
       end
-  
     end
   end
 end

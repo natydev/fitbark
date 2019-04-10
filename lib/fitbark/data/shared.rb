@@ -30,7 +30,6 @@ module Fitbark
       def init_medical_condition(attr)
         Fitbark::Data::MedicalCondition.new(attr)
       end
-
     end
   end
 end

@@ -55,7 +55,6 @@ module Fitbark
       def last_sync
         time_parser(self[:last_sync])
       end
-
     end
   end
 end
