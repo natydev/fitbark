@@ -23,6 +23,7 @@ require_relative 'fitbark/handler/v2/user_info'
 require_relative 'fitbark/handler/v2/user_picture'
 require_relative 'fitbark/handler/v2/dog_relations'
 require_relative 'fitbark/handler/v2/dog_info'
+require_relative 'fitbark/handler/v2/dog_picture'
 # doc
 module Fitbark
 end
