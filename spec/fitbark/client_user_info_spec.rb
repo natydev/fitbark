@@ -3,6 +3,7 @@ require 'fitbark/errors'
 require 'fitbark/constants'
 require 'fitbark/handler/v2/base.rb'
 require 'fitbark/handler/v2/user_info.rb'
+require 'fitbark/data/shared.rb'
 require 'fitbark/data/user_info.rb'
 
 RSpec.describe Fitbark::Client do

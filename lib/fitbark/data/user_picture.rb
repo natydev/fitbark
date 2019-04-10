@@ -1,13 +1,17 @@
 module Fitbark
   module Data
     # define user picture data structure
-    class UserPicture < Hashie::Trash
-      include Hashie::Extensions::IndifferentAccess
+    class UserPicture < OpenStruct
+      include Fitbark::Data::Shared
 
-      property :base64, from: :data
+      # property :data
+
+      def base64
+        data
+      end
 
       def bytes
-        Base64.decode64(base64)
+        Base64.decode64(data)
       end
     end
   end

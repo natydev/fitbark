@@ -1,21 +1,22 @@
 module Fitbark
   module Data
     # define TokenInfo data structure
-    class TokenInfo < Hashie::Trash
-      include Hashie::Extensions::IndifferentAccess
-      include Hashie::Extensions::Coercion
+    class TokenInfo < OpenStruct
+      include Fitbark::Data::Shared
+
       # define Application data inside TokenInfo
-      class Application < Hashie::Trash
-        include Hashie::Extensions::IndifferentAccess
-        property :uid
+      class Application < OpenStruct
+        include Fitbark::Data::Shared
       end
 
-      property :resource_owner_id
-      property :scopes
-      property :expires_at, from: :expires_in_seconds,
-                            with: ->(seconds) { Time.now.utc + seconds }
-      property :application
-      coerce_key :application, Application
+      def expires_at
+        Time.now.utc + self[:expires_in].to_i
+      end
+
+      def application
+        Application.new self[:application]
+      end
+
     end
   end
 end

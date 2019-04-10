@@ -1,14 +1,25 @@
 module Fitbark
   module Data
     # define Token data structure
-    class Token < Hashie::Trash
-      include Hashie::Extensions::IndifferentAccess
+    class Token < OpenStruct
+      include Fitbark::Data::Shared
 
-      property :token, from: :access_token
-      property :type, from: :token_type
-      property :expires_at, from: :expires_in,
-                            with: ->(seconds) { Time.now.utc + seconds }
-      property :scopes, from: :scope, with: ->(scope) { Array(scope) }
+      def token
+        self[:access_token]
+      end
+
+      def type
+        self[:token_type]
+      end
+
+      def expires_at
+        Time.now.utc + self[:expires_in].to_i
+      end
+
+      def scopes
+        Array(self[:scope])
+      end
+
     end
   end
 end
