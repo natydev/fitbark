@@ -7,7 +7,7 @@ module Fitbark
 
         # https://app.fitbark.com/api/v2/user
         def response
-          Fitbark::Data::UserPicture.new(json_response['image'])
+          Fitbark::Data::Picture.new(json_response['image'])
         end
 
         private

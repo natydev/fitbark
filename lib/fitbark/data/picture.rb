@@ -1,7 +1,7 @@
 module Fitbark
   module Data
     # define user picture data structure
-    class UserPicture < OpenStruct
+    class Picture < OpenStruct
       include Fitbark::Data::Shared
 
       # property :data

@@ -1,6 +1,6 @@
 RSpec.describe Fitbark::Client do
   let!(:token) { random_token }
-  let!(:user_picture_response) { json_response(:user_picture) }
+  let!(:user_picture_response) { json_response(:picture) }
   let(:subject) do
     described_class.new(token: token)
   end
@@ -18,7 +18,7 @@ RSpec.describe Fitbark::Client do
           .to have_requested(:get, 'https://app.fitbark.com/api/v2/picture/user/abc').once
       end
       it 'return an object Fitbark::Data::UserInfo' do
-        expect(subject.user_picture(user_slug: 'abc')).to be_kind_of(Fitbark::Data::UserPicture)
+        expect(subject.user_picture(user_slug: 'abc')).to be_kind_of(Fitbark::Data::Picture)
       end
     end
     context 'when response has errors' do
