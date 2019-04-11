@@ -12,9 +12,11 @@ module Fitbark
     attr_reader :uri
 
     def method_missing(method, **args)
-      klass_handler(method).new(token: token, opts: args).response
-    rescue NameError => e
-      super
+      if respond_to?(method)
+        klass_handler(method).new(token: token, opts: args).response
+      else
+        super
+      end
     end
 
     def respond_to?(method, include_private = false)
