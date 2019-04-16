@@ -35,10 +35,12 @@ module Fitbark
 
         def validate_input
           unless opts[:from].instance_of?(Date)
-            Fitbark::Errors::FormatError.new(message: "Wrong or missing date for param 'from'")
+            raise Fitbark::Errors::FormatError
+              .new(message: "Wrong or missing date for param 'from'")
           end
           unless opts[:to].instance_of?(Date)
-            Fitbark::Errors::FormatError.new(message: "Wrong or missing date for param 'to'")
+            raise Fitbark::Errors::FormatError
+              .new(message: "Wrong or missing date for param 'to'")
           end
         end
       end
