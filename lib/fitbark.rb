@@ -22,6 +22,7 @@ require_relative 'fitbark/data/dog_relation'
 require_relative 'fitbark/data/activity_daily'
 require_relative 'fitbark/data/activity_hourly'
 require_relative 'fitbark/data/similar_dogs_stat'
+require_relative 'fitbark/data/activity_level'
 require_relative 'fitbark/handler/v2/base'
 require_relative 'fitbark/handler/v2/user_info'
 require_relative 'fitbark/handler/v2/user_picture'
@@ -32,6 +33,7 @@ require_relative 'fitbark/handler/v2/user_relations'
 require_relative 'fitbark/handler/v2/activity_series'
 require_relative 'fitbark/handler/v2/similar_dogs_stats'
 require_relative 'fitbark/handler/v2/activity_total'
+require_relative 'fitbark/handler/v2/time_breakdown'
 # doc
 module Fitbark
 end
