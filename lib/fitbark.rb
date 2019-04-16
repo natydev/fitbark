@@ -31,6 +31,7 @@ require_relative 'fitbark/handler/v2/dog_picture'
 require_relative 'fitbark/handler/v2/user_relations'
 require_relative 'fitbark/handler/v2/activity_series'
 require_relative 'fitbark/handler/v2/similar_dogs_stats'
+require_relative 'fitbark/handler/v2/activity_total'
 # doc
 module Fitbark
 end
