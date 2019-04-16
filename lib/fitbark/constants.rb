@@ -8,5 +8,9 @@ module Fitbark
     TOKEN_PATH = '/oauth/token'.freeze
     TOKEN_INFO_PATH = TOKEN_PATH + '/info'.freeze
     PREFIX_NAME_HANDLER = 'Fitbark::Handler::V2::'.freeze
+
+    def camel(str)
+      str.split('_').collect(&:capitalize).join
+    end
   end
 end

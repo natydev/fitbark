@@ -13,11 +13,11 @@ RSpec.describe Fitbark::Client do
           .to_return(status: 200, body:
             user_relations_response, headers: {})
       end
-      it 'connect to endpoint user info' do
+      it 'connect to endpoint user_relations' do
         expect(subject.user_relations(dog_slug: 'abc'))
           .to have_requested(:get, 'https://app.fitbark.com/api/v2/user_relations/abc').once
       end
-      it 'return an object Fitbark::Data::UserInfo' do
+      it 'return an object Array' do
         expect(subject.user_relations(dog_slug: 'abc')).to be_kind_of(Array)
       end
     end

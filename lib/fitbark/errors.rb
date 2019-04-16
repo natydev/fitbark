@@ -27,5 +27,7 @@ module Fitbark
     class ConnectionError < BaseError; end
     # DataError
     class DataError < BaseError; end
+    # FormatError
+    class FormatError < BaseError; end
   end
 end

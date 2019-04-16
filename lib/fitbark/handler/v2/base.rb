@@ -20,7 +20,8 @@ module Fitbark
 
         def connection(verb: :get, fragment:, params: {})
           conn = Faraday.new(url: uri.to_s).public_send(verb) do |req|
-            req.url fragment, params
+            req.url fragment
+            req.params = params
             req.headers = {
               'Content-Type' => 'application/json',
               'Authorization' => "Bearer #{token}"

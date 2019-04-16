@@ -28,8 +28,7 @@ module Fitbark
     private
 
     def klass_handler(handler)
-      eval("#{PREFIX_NAME_HANDLER}#{handler.to_s.split('_')
-        .collect(&:capitalize).join}")
+      eval("#{PREFIX_NAME_HANDLER}#{camel(handler.to_s)}")
     end
 
     attr_reader :token

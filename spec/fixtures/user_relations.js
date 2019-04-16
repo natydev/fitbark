@@ -1,5 +1,5 @@
 {
-    "user_relations": [
+    "user_relation": [
         {
             "id": 11,
             "date": "2014-08-15T19:59:16.000Z",

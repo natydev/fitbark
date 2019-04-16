@@ -22,7 +22,7 @@ module RspecHelpers
   end
 
   def stub_webmock_error(fragment)
-    stub_request(:get, "#{api_uri_request}/#{fragment}")
+    stub_request(:any, "#{api_uri_request}/#{fragment}")
       .with(headers: api_headers_request(token))
       .to_return(status: 500, body:
         'something was wrong')

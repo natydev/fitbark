@@ -19,6 +19,8 @@ require_relative 'fitbark/data/dog_preview'
 require_relative 'fitbark/data/dog_info'
 require_relative 'fitbark/data/user_relation'
 require_relative 'fitbark/data/dog_relation'
+require_relative 'fitbark/data/activity_daily'
+require_relative 'fitbark/data/activity_hourly'
 require_relative 'fitbark/handler/v2/base'
 require_relative 'fitbark/handler/v2/user_info'
 require_relative 'fitbark/handler/v2/user_picture'
@@ -26,6 +28,7 @@ require_relative 'fitbark/handler/v2/dog_relations'
 require_relative 'fitbark/handler/v2/dog_info'
 require_relative 'fitbark/handler/v2/dog_picture'
 require_relative 'fitbark/handler/v2/user_relations'
+require_relative 'fitbark/handler/v2/activity_series'
 # doc
 module Fitbark
 end
