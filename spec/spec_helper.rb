@@ -1,7 +1,6 @@
 require 'bundler/setup'
 require 'fitbark'
 require 'securerandom'
-require 'hashie'
 require 'faker'
 require 'webmock/rspec'
 require 'support/rspec_helpers'
