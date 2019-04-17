@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['NatyDev']
   spec.email         = ['natydev@aol.com']
 
-  spec.summary       = 'Wrapper for Fitbark API.'
+  spec.summary       = 'Wrapper for FitBark API.'
   spec.description   = 'It provides simple methods to handle ' \
    'authorization and to execute HTTP calls.'
   spec.homepage      = 'https://github.com/natydev/fitbark'
