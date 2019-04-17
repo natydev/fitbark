@@ -1,3 +1,9 @@
+![](https://inch-ci.org/github/natydev/fitbark.svg?branch=master&amp;style=flat)
+[![Build Status](https://travis-ci.org/natydev/fitbark.png?branch=master)](https://travis-ci.org/natydev/fitbark)
+[![Maintainability](https://api.codeclimate.com/v1/badges/20bcd9a6380363916f5e/maintainability)](https://codeclimate.com/github/natydev/fitbark/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/20bcd9a6380363916f5e/test_coverage)](https://codeclimate.com/github/natydev/fitbark/test_coverage)
+[![Gem Version](https://badge.fury.io/rb/fitbark.svg)](https://badge.fury.io/rb/fitbark)
+
 # FitBark (work in progress)
 
 A Ruby interface to the FitBark® API.
@@ -41,7 +47,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/fitbark. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/natydev/fitbark. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
