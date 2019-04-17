@@ -1,7 +1,7 @@
 module Fitbark
   module Handler
     module V2
-      # Fitbark::Handler::V2::User class
+      # Fitbark::Handler::V2::UserPicture class
       class UserPicture
         include Fitbark::Handler::V2::Base
 
