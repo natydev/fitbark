@@ -1,6 +1,6 @@
 module Fitbark
   module Data
-    # Fitbark::Data::Shared module
+    # Provides general behaviour for data classes.
     module Shared
       def self.included(base)
         base.send :extend, ClassMethods
@@ -10,7 +10,7 @@ module Fitbark
       end
 
       private
-
+      
       def time_parser(attr)
         Time.parse(attr.to_s)
       rescue ArgumentError

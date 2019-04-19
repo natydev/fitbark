@@ -1,16 +1,14 @@
 module Fitbark
   module Data
-    # Defines structure for user's informations.
+    # Defines structure for dog relation between user.
     #
-    # Original attribute names from source API:  
-    # - *slug*
-    # - *slug*
-    # - *username*
-    # - *name*
-    # - *first_name*
-    # - *last_name*
-    # - *picture_hash*
-    class UserInfo < StrictOpenStruct
+    # Original attribute names from source API: 
+    # - *slug*  
+    # - *username*  
+    # - *name*  
+    # - *first_name*  
+    # - *last_name*   
+    class UserPreview < StrictOpenStruct
       include Fitbark::Data::Shared
 
       # an alias for source *username* attribute

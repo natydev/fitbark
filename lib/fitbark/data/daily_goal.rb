@@ -1,18 +1,25 @@
 module Fitbark
   module Data
-    # define user info data structure
-    class DailyGoal < OpenStruct
+    # Defines structure for dog's daily points goal.
+    #
+    # Original attribute names from source API:  
+    # - *goal*,
+    # - *date*
+    class DailyGoal < StrictOpenStruct
       include Fitbark::Data::Shared
-      # property :goal
-      # property :date
 
+      # parse String value into Date for *date* attribute
+      def date
+        date_parser(self[:date])
+      end
+
+      alias set_on date
+
+      # an alias for *goal* attribute
       def goal_points
         self[:goal]
       end
 
-      def set_on
-        date_parser(self[:date])
-      end
     end
   end
 end

@@ -1,15 +1,18 @@
 module Fitbark
   module Data
-    # define user picture data structure
-    class Picture < OpenStruct
+    # Defines structure for picture data.
+    #
+    # Original attribute names from source API: 
+    # - *data*
+    class Picture < StrictOpenStruct
       include Fitbark::Data::Shared
 
-      # property :data
-
+      # an alias for *data* attribute
       def base64
-        data
+        self[:data]
       end
 
+      # decode data from base64
       def bytes
         Base64.decode64(data)
       end

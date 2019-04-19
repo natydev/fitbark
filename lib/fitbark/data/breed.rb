@@ -1,7 +1,11 @@
 module Fitbark
   module Data
-    # define user info data structure
-    class Breed < OpenStruct
+    # Defines structure for dog's breed data.
+    #
+    # Original attribute names from source API:  
+    # - *id*,
+    # - *name*
+    class Breed < StrictOpenStruct
       include Fitbark::Data::Shared
     end
   end

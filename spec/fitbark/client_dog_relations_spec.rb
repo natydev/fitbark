@@ -20,6 +20,15 @@ RSpec.describe Fitbark::Client do
       it 'return an object Fitbark::Data::UserInfo' do
         expect(subject.dog_relations).to be_kind_of(Array)
       end
+      it 'each item inside array is kind Fitbark::Data::UserRelation' do
+        expect(subject.dog_relations.first)
+          .to be_kind_of(Fitbark::Data::UserRelation)
+      end
+      it 'each Fitbark::Data::UserRelation has inside a
+       Fitbark::Data::UserRelation object' do
+        expect(subject.dog_relations.first.dog)
+          .to be_kind_of(Fitbark::Data::DogInfo)
+      end
     end
     context 'when response has errors' do
       let!(:stub_response_error) { stub_webmock_error('dog_relations') }
