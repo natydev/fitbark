@@ -1,8 +1,22 @@
 module Fitbark
-  # Fitbark::Auth provide oauth2 methods
+  # Provides oauth2 methods
   class Auth
     include Fitbark::Constants
-
+    # == A sample usage:
+    # First step to generate an authorization uri:
+    #     client_id = 'CLIENT-ID-PROVIDED-BY-FITBARK'
+    #     client_secret = 'CLIENT-SECRET-PROVIDED-BY-FITBARK'
+    #     redirect_uri = 'urn:ietf:wg:oauth:2.0:oob'
+    #     client = Fitbark::Auth.new(client_id: client_id, redirect_uri: redirect_uri)
+    #     client.authorization_uri
+    # 
+    # Once that authorization uri was open and fetched the authorization 
+    # code from html (normally this operation is done with browser),
+    # proceed with 2nd step to retieve access token:
+    #   authorization_code = '27e5dd1307cddc7b5d8d72264ef1...'
+    #   client = Fitbark::Auth.new(client_id: client_id, redirect_uri: redirect_uri,
+    #                              code: authorization_code, client_secret: client_secret)
+    #   client.fetch_access_token!
     def initialize(client_id: nil, client_secret: nil,
                    redirect_uri: nil, code: nil, token: nil)
       @client_id = client_id
@@ -18,6 +32,7 @@ module Fitbark
     attr_reader :client_id, :client_secret, :redirect_uri,
                 :token_data, :token_info
 
+    # return an URI to fetch the authorization code
     def authorization_uri
       uri.path = AUTHORIZE_PATH
       uri.query_values = {
@@ -28,6 +43,7 @@ module Fitbark
       uri.to_s
     end
 
+    # return a Fitbark::Data::Token object
     def fetch_access_token!
       if token_response.success?
         apply_token_data(token_response)
@@ -36,6 +52,7 @@ module Fitbark
       end
     end
 
+    # return a Fitbark::Data::TokenInfo object
     def fetch_token_info
       response = token_info_response
       if response.success?
@@ -45,6 +62,7 @@ module Fitbark
       end
     end
 
+    # return the raw access_token (String)
     def token
       read_token
     end
@@ -101,7 +119,7 @@ module Fitbark
     end
 
     def parsed_body(resp)
-      JSON.parse(resp.body)
+      Oj.load(resp.body)
     end
   end
 end

@@ -2,6 +2,7 @@ module Fitbark
   module Data
     # Provides general behaviour for data classes.
     module Shared
+      # :nodoc:
       def self.included(base)
         base.send :extend, ClassMethods
       end

@@ -1,5 +1,5 @@
 module Fitbark
-  # this module provide constants support
+  # Provides general constants support.
   module Constants
     API_SCHEME = 'https'.freeze
     API_HOST = 'app.fitbark.com'.freeze
@@ -9,6 +9,7 @@ module Fitbark
     TOKEN_INFO_PATH = TOKEN_PATH + '/info'.freeze
     PREFIX_NAME_HANDLER = 'Fitbark::Handler::V2::'.freeze
 
+    # :nodoc:
     def camel(str)
       str.split('_').collect(&:capitalize).join
     end

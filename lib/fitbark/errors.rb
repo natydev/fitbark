@@ -1,11 +1,11 @@
 module Fitbark
-  # this module provide error classes
+  # Provides namespace for error classes.
   module Errors
-    # common base error class
+    # provide base behaviour for all errors classes.
     class BaseError < StandardError
-      def initialize(args = {})
-        @message = args.fetch(:message, nil)
-        @code = args.fetch(:code, 400)
+      def initialize(message: nil, code: 400)
+        @message = message
+        @code = code
       end
 
       attr_accessor :message, :code
