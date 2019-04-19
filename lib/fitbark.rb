@@ -2,6 +2,7 @@ require 'addressable'
 require 'faraday'
 require 'oj'
 require 'base64'
+require 'strict_open_struct'
 
 require_relative 'fitbark/version'
 require_relative 'fitbark/constants'
@@ -37,6 +38,7 @@ require_relative 'fitbark/handler/v2/activity_total'
 require_relative 'fitbark/handler/v2/time_breakdown'
 require_relative 'fitbark/handler/v2/daily_goals'
 require_relative 'fitbark/handler/v2/set_daily_goal'
-# doc
+
+# module Fitbark: top level namespace
 module Fitbark
 end

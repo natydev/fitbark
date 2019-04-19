@@ -5,6 +5,7 @@ PATH
       addressable (~> 2.6)
       faraday (~> 0.15)
       oj (~> 3.7)
+      strict_open_struct (~> 0.0.2)
 
 GEM
   remote: https://rubygems.org/
@@ -56,6 +57,7 @@ GEM
       unicode-display_width (>= 1.4.0, < 1.6)
     ruby-progressbar (1.10.0)
     safe_yaml (1.0.5)
+    strict_open_struct (0.0.2.0)
     unicode-display_width (1.5.0)
     webmock (3.5.1)
       addressable (>= 2.3.6)
