@@ -1,10 +1,26 @@
 module Fitbark
   module Handler
     module V2
-      # Fitbark::Handler::V2::SetDailyGoal class
+      # = \#set_daily_goal
+      # Fitbark::Handler::V2::SetDailyGoal define method *set_daily_goal*
+      # inside Client object
+      #
+      # === params (key/value):
+      #
+      # - *dog_slug*: slug ID relative to dog (String)
+      # - *goal_points*: goal points to set (Integer)
+      # - *set_on*: date from the goal will start to set (Date)
+      #
+      # example usage:
+      #   client = Client.new(token: 'a5b3f8...')
+      #   client.set_daily_goal(dog_slug: 'v4s1...', set_on: 1.month.from_now, goal_points: 11000)
+      #
+      # === response:
+      # An array of Fitbark::Data::DailyGoal objects.
       class SetDailyGoal
         include Fitbark::Handler::V2::Base
 
+        # :nodoc:
         def initialize(token:, opts: {})
           super
           validate_input

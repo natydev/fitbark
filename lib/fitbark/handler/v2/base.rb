@@ -1,10 +1,11 @@
 module Fitbark
   module Handler
     module V2
-      # Fitbark::Handler::V2::Base module
+      # provide base behaviour for all handler classes.
       module Base
         include Fitbark::Constants
 
+        # :nodoc:
         def initialize(token:, opts: {})
           @token = token
           @opts = opts

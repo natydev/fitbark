@@ -1,10 +1,30 @@
 module Fitbark
   module Handler
     module V2
-      # Fitbark::Handler::V2::ActivitySeries class
+      # = \#activity_series
+      # Fitbark::Handler::V2::ActivitySeries define method *activity_series*
+      # inside Client object
+      #
+      # === params (key/value):
+      #
+      # - *dog_slug*: slug ID relative to dog (String)
+      # - *from*: data start date (Date)
+      # - *to*: data end date (Date)
+      # - *resolution*: can be +:daily+ or +:hourly+ (Symbol)
+      #
+      # example usage:
+      #   client = Client.new(token: 'a5b3f8...')
+      #   client.activity_series(dog_slug: 'v4s1...', from: 3.days.ago, to: Date.today, resolution: :daily)
+      #
+      # === response:
+      # when resolution is +:daily+:: An array of
+      #                               Fitbark::Data::ActivityDaily objects.
+      # when resolution is +:hourly+:: An array of
+      #                                Fitbark::Data::ActivityHourly objects.
       class ActivitySeries
         include Fitbark::Handler::V2::Base
 
+        # :nodoc:
         RESOLUTIONS = %i[daily hourly].freeze
 
         def initialize(token:, opts: {})

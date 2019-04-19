@@ -1,10 +1,26 @@
 module Fitbark
   module Handler
     module V2
-      # Fitbark::Handler::V2::ActivityTotal class
+      # = \#activity_total
+      # Fitbark::Handler::V2::ActivityTotal define method *activity_total*
+      # inside Client object
+      #
+      # === params (key/value):
+      #
+      # - *dog_slug*: slug ID relative to dog (String)
+      # - *from*: data start date (Date)
+      # - *to*: data end date (Date)
+      #
+      # example usage:
+      #   client = Client.new(token: 'a5b3f8...')
+      #   client.activity_total(dog_slug: 'v4s1...', from: 3.days.ago, to: Date.today)
+      #
+      # === response:
+      # return an Integer object.
       class ActivityTotal
         include Fitbark::Handler::V2::Base
 
+        # :nodoc:
         def initialize(token:, opts: {})
           super
           validate_input
