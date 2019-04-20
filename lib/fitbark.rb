@@ -38,6 +38,6 @@ require_relative 'fitbark/handler/v2/time_breakdown'
 require_relative 'fitbark/handler/v2/daily_goals'
 require_relative 'fitbark/handler/v2/set_daily_goal'
 
-# module Fitbark: top level namespace
 module Fitbark
+  # :nodoc:
 end

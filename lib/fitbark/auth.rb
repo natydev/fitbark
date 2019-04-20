@@ -7,16 +7,16 @@ module Fitbark
     #     client_id = 'CLIENT-ID-PROVIDED-BY-FITBARK'
     #     client_secret = 'CLIENT-SECRET-PROVIDED-BY-FITBARK'
     #     redirect_uri = 'urn:ietf:wg:oauth:2.0:oob'
-    #     client = Fitbark::Auth.new(client_id: client_id, redirect_uri: redirect_uri)
-    #     client.authorization_uri
+    #     auth = Fitbark::Auth.new(client_id: client_id, redirect_uri: redirect_uri)
+    #     auth.authorization_uri
     # 
     # Once that authorization uri was open and fetched the authorization 
     # code from html (normally this operation is done with browser),
     # proceed with 2nd step to retieve access token:
     #   authorization_code = '27e5dd1307cddc7b5d8d72264ef1...'
-    #   client = Fitbark::Auth.new(client_id: client_id, redirect_uri: redirect_uri,
+    #   auth = Fitbark::Auth.new(client_id: client_id, redirect_uri: redirect_uri,
     #                              code: authorization_code, client_secret: client_secret)
-    #   client.fetch_access_token!
+    #   auth.fetch_access_token!
     def initialize(client_id: nil, client_secret: nil,
                    redirect_uri: nil, code: nil, token: nil)
       @client_id = client_id
