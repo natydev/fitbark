@@ -37,7 +37,7 @@ Or install it yourself as:
     $ gem install fitbark
 
 
-## Usage examples
+## Usage and examples
 
 First of all, to use this gem you need to register inside FitBark's website for a FitBark Developer Application.
 
@@ -159,7 +159,7 @@ client.similar_dogs_stats(dog_slug: my_dog.slug)
 # returns a Fitbark::Data::SimilarDogsStat object
 ```
 
-time breakdown:
+time breakdown(in a selected date range):
 
 ```ruby
 client.time_breakdown(dog_slug: my_dog.slug, from: 20.days.ago, to: Date.today)
