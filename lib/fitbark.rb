@@ -38,6 +38,7 @@ require_relative 'fitbark/handler/v2/time_breakdown'
 require_relative 'fitbark/handler/v2/daily_goals'
 require_relative 'fitbark/handler/v2/set_daily_goal'
 require_relative 'fitbark/handler/v2/own_dogs'
+require_relative 'fitbark/handler/v2/friend_dogs'
 
 module Fitbark
   # :nodoc:
