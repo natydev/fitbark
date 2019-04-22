@@ -13,6 +13,10 @@ Gem::Specification.new do |spec|
    'authorization and to execute HTTP calls.'
   spec.homepage      = 'https://github.com/natydev/fitbark'
   spec.license       = 'MIT'
+  spec.metadata = {
+    "documentation_uri" => "https://www.rubydoc.info/github/natydev/fitbark/master"
+  }
+
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem.
