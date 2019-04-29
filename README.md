@@ -41,7 +41,7 @@ Or install it yourself as:
 
 First of all, to use this gem you need to register inside FitBark's website for a FitBark Developer Application.
 
-Once you have the `client_id` and `client_secret` you can start to use FitBark's API.
+Once you have received the `client_id` and `client_secret` you can start to use FitBark's API.
 
 ### Authentication
 
